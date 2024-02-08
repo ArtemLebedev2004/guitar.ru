@@ -1,30 +1,16 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <header>
+    <NavBar />
+  </header>
+
   <router-view/>
+
+  <footer class="mt-12 px-3 py-10 bg-light-orange">
+    <FooterSection />
+  </footer>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<script setup>
+import NavBar from './components/structure/NavBar.vue';
+import FooterSection from './components/structure/FooterSection.vue';
+</script>
